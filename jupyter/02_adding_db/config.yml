@@ -1,0 +1,9 @@
+data_folder: "../../data"
+database_file_path: "../../data/data.db"
+tz_mapper:
+  CET/CEST: CET
+  EET/EEST: EET
+currency_mapper:
+  BGN: 0.511292
+  EUR: 1
+  RON: 0.205

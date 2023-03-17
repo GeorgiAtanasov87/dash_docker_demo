@@ -1,0 +1,19 @@
+services:
+  jupyter:
+    build:
+      context: jupyter
+      target: miniconda
+    ports:
+      - '8888:8888'
+    volumes:
+      - /mnt/myvm/dash_docker_demo:/opt/notebooks
+
+  dev:
+    build:
+      context: app
+      target: builder
+    volumes:
+      - /mnt/myvm/python-env/app:/app
+    ports:
+      - "8000:8000"
+    entrypoint: flask --app app run --debug --port 8000 --host="0.0.0.0"
