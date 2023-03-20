@@ -4,15 +4,12 @@ RUN mkdir -p /opt/notebooks
 
 WORKDIR /opt/notebooks
 
-RUN conda install nodejs -y --quiet
-RUN conda install jupyterlab -y --quiet
-RUN conda install -n base jupyterlab_widgets
-RUN conda install -n base ipywidgets -y --quiet
-RUN conda install plotly -y --quiet
-RUN conda install pandas requests pendulum pyyaml -y --quiet
-RUN pip install sqlalchemy
-RUN pip install ipywidgets plotly --upgrade
-
+# Install all required libraires using conda
+RUN conda install nodejs jupyterlab ipywidgets plotly \
+  pandas requests pendulum pyyaml sqlalchemy -y --quiet
+  
+# Update the old libraries in conda repo using pip
+RUN pip install sqlalchemy ipywidgets plotly --upgrade
 
 EXPOSE 8888
 
