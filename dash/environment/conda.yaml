@@ -1,4 +1,4 @@
-name: myenv
+name: dash-env
 dependencies:
   - python>=3.11
   - pip

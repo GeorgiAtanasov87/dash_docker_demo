@@ -17,4 +17,3 @@ services:
       - ./data:/opt/dash/dam_data
     ports:
       - "8050:8050"
-    entrypoint: python main.py
