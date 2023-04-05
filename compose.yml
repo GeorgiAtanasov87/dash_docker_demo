@@ -6,15 +6,15 @@ services:
     ports:
       - '8888:8888'
     volumes:
-      - /mnt/myvm/dash_docker_demo:/opt/notebooks
+      - .:/opt/notebooks
 
   dash:
     build:
       context: dash
       target: dash
     volumes:
-      - /mnt/myvm/dash_docker_demo/dash:/opt/dash
-      - /mnt/myvm/dash_docker_demo/data:/opt/dash/dam_data
+      - ./dash:/opt/dash
+      - ./data:/opt/dash/dam_data
     ports:
       - "8050:8050"
     entrypoint: python main.py
