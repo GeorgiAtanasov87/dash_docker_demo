@@ -1,0 +1,4 @@
+bg:
+  title: Цени на електроенергия
+  xaxis_title: Период, CET
+  yaxis_title: Цена, EUR/MWh

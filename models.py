@@ -6,7 +6,7 @@ from enum import Enum
 import numpy as np
 from zoneinfo import ZoneInfo
 import re
-
+import pendulum
 
 tz_mapper = {"CET/CEST": "CET", "EET/EEST": "EET"}
 
@@ -29,17 +29,18 @@ class DayAheadMarket(BaseModel):
 
 
 class ENTSOEDAM:
+
     def parse_column_names(self, columns: list[str]):
         tz_name = tz_mapper[re.findall(r"MTU \((.*?)\)", columns[0])[0]]
         print("TIMEZONE NAME:", tz_name)
         currency = "EUR"
         return tz_name
 
-    def parse_timestamp(self, value: str, tz: str):
+    def parse_timestamp(self, value: str, source_tz: str, output_tz: str = "UTC"):
         "Parse srting to timezone aware datetime"
-        date_str = f"{value.split(' - ')[0]}"
-        datetime_obj = datetime.strptime(date_str, "%d.%m.%Y %H:%M")
-        return datetime_obj.replace(tzinfo=ZoneInfo(tz))
+        date_str = f"{value.split(' - ')[0]}" 
+        tz_obj = pendulum.timezone(source_tz)
+        return pendulum.from_format(date_str, 'DD.MM.YYYY HH:mm', tz=tz_obj).in_tz(output_tz)
 
     def tz_to_utc(self, tz_aware_timestamp: datetime):
         # print("TIMESTAMP:", tz_aware_timestamp)

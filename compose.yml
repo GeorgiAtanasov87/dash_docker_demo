@@ -8,12 +8,13 @@ services:
     volumes:
       - /mnt/myvm/dash_docker_demo:/opt/notebooks
 
-  dev:
+  dash:
     build:
-      context: app
-      target: builder
+      context: dash
+      target: dash
     volumes:
-      - /mnt/myvm/python-env/app:/app
+      - /mnt/myvm/dash_docker_demo/dash:/opt/dash
+      - /mnt/myvm/dash_docker_demo/data:/opt/dash/dam_data
     ports:
-      - "8000:8000"
-    entrypoint: flask --app app run --debug --port 8000 --host="0.0.0.0"
+      - "8050:8050"
+    entrypoint: python main.py

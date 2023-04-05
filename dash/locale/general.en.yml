@@ -1,0 +1,15 @@
+---
+en:
+  amount: Amount
+  app_title: Dash Demo
+  category: Category
+  month: Month
+  no_data: No data selected
+  select: Select...
+  select_all: Select all
+  clear_all: Clear all
+  year: Year
+  country: Country
+  aggregation: Aggregation
+  period: Period
+  select_language: Select language

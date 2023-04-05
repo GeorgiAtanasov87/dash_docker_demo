@@ -1,0 +1,5 @@
+DAM_PRICES_CHART = "dam-prices-chart"
+DAM_COUNTRIES_DROPDOWN = "dam-countries-dropdown"
+SELECT_ALL_COUNTRIES_BUTTON = "select-all-countries-button"
+DAM_AGGREGATION_DROPDOWN = "dam-aggregation-dropdown"
+DAM_DATE_PICKER = "dam-date-picker"

@@ -1,0 +1,10 @@
+Babel
+dash
+dash-bootstrap-components
+dash_daq
+pandas
+pandas-stubs
+plotly
+pyyaml
+python-i18n[YAML]
+sqlalchemy

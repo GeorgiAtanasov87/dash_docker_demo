@@ -1,0 +1,10 @@
+---
+bg:
+  amount: Количество
+  app_title: Пример
+  no_data: Няма избрани данни
+  select: Избери...
+  select_all: Избери всички
+  country: Държави
+  aggregation: Агрегиране
+  period: Период
