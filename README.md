@@ -5,7 +5,12 @@ It contains a containerized Dash and a separate container with Jupyter lab that 
 be used as development environment for the dash application.
 
 The dash app is a simple data visualisation tool that reads DAM energy prices for the Balkans region.
-All data is from Entsoe transpaarency portal: https://transparency.entsoe.eu/transmission-domain/r2/dayAheadPrices/show![image](https://user-images.githubusercontent.com/16559858/230373892-a3c0ae4e-7a34-4c54-8785-d9912c2605e3.png)
+All data is from Entsoe transparency portal: https://transparency.entsoe.eu/transmission-domain/r2/dayAheadPrices/show![image](https://user-images.githubusercontent.com/16559858/230373892-a3c0ae4e-7a34-4c54-8785-d9912c2605e3.png)
+
+The application follows the structure presented by ArjanCodes in his 3 part Dash miniseries:
+
+https://github.com/ArjanCodes/2022-dash
+
 
 To demo the app:
 1. Clone this repo
